@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\DevTaskAdapter.cs" />
+    <Compile Include="Adapters\TreeAdapter.cs" />
     <Compile Include="Data\DatabaseManager.cs" />
     <Compile Include="Data\DevTaskDto.cs" />
     <Compile Include="MainActivity.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Services\Implementations\DevTaskManager.cs" />
     <Compile Include="Services\Interfaces\IDevTaskManager.cs" />
     <Compile Include="Services\ViewModels\TaskViewModel.cs" />
+    <Compile Include="Services\ViewModels\TreeNodeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -138,6 +140,9 @@
     <AndroidResource Include="Resources\layout\toolbar.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spinner_item.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

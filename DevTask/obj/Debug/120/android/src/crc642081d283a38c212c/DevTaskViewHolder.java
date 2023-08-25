@@ -18,8 +18,9 @@ public class DevTaskViewHolder
 	public DevTaskViewHolder (android.view.View p0)
 	{
 		super (p0);
-		if (getClass () == DevTaskViewHolder.class)
+		if (getClass () == DevTaskViewHolder.class) {
 			mono.android.TypeManager.Activate ("DevTask.Adapters.DevTaskViewHolder, DevTask", "Android.Views.View, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 	private java.util.ArrayList refList;

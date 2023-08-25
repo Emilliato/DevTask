@@ -9,11 +9,18 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-    <androidx.recyclerview.widget.RecyclerView
+        <Spinner
+        android:id="@+id/custom_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/toolbar"
         android:id="@+id/rv_tasks"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/custom_spinner"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
          android:id="@+id/fab_add"
@@ -23,5 +30,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
         android:elevation="16dp"
-        android:src="@android:drawable/ic_input_add"/>
+        android:src="@android:drawable/ic_input_add"/>-->
+
+
 </RelativeLayout>

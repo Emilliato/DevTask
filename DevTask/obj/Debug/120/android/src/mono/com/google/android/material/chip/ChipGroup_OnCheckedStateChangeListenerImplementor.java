@@ -20,8 +20,9 @@ public class ChipGroup_OnCheckedStateChangeListenerImplementor
 	public ChipGroup_OnCheckedStateChangeListenerImplementor ()
 	{
 		super ();
-		if (getClass () == ChipGroup_OnCheckedStateChangeListenerImplementor.class)
+		if (getClass () == ChipGroup_OnCheckedStateChangeListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Google.Android.Material.Chip.ChipGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

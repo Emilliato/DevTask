@@ -20,10 +20,10 @@ public final class R {
 	}
 	public static final class id {
 		public static final int bottom = 0x7f08005e;
-		public static final int end = 0x7f0800bb;
-		public static final int left = 0x7f0800f9;
-		public static final int none = 0x7f08014c;
-		public static final int right = 0x7f08016c;
+		public static final int end = 0x7f0800bc;
+		public static final int left = 0x7f0800fa;
+		public static final int none = 0x7f08014d;
+		public static final int right = 0x7f08016d;
 		public static final int start = 0x7f0801a6;
 		public static final int top = 0x7f0801d9;
 	}

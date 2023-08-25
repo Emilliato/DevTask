@@ -21,8 +21,9 @@ public class DevTaskAdapter
 	public DevTaskAdapter ()
 	{
 		super ();
-		if (getClass () == DevTaskAdapter.class)
+		if (getClass () == DevTaskAdapter.class) {
 			mono.android.TypeManager.Activate ("DevTask.Adapters.DevTaskAdapter, DevTask", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

@@ -20,8 +20,9 @@ public class MaterialCheckable_OnCheckedChangeListenerImplementor
 	public MaterialCheckable_OnCheckedChangeListenerImplementor ()
 	{
 		super ();
-		if (getClass () == MaterialCheckable_OnCheckedChangeListenerImplementor.class)
+		if (getClass () == MaterialCheckable_OnCheckedChangeListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Google.Android.Material.Internal.IMaterialCheckableOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

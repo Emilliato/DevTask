@@ -19,8 +19,9 @@ public class PersistanceActivity
 	public PersistanceActivity ()
 	{
 		super ();
-		if (getClass () == PersistanceActivity.class)
+		if (getClass () == PersistanceActivity.class) {
 			mono.android.TypeManager.Activate ("DevTask.PersistanceActivity, DevTask", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

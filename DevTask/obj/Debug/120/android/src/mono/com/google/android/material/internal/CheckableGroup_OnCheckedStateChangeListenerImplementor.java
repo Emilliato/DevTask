@@ -20,8 +20,9 @@ public class CheckableGroup_OnCheckedStateChangeListenerImplementor
 	public CheckableGroup_OnCheckedStateChangeListenerImplementor ()
 	{
 		super ();
-		if (getClass () == CheckableGroup_OnCheckedStateChangeListenerImplementor.class)
+		if (getClass () == CheckableGroup_OnCheckedStateChangeListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Google.Android.Material.Internal.CheckableGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

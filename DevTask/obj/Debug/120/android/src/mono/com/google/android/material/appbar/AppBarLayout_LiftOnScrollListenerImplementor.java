@@ -20,8 +20,9 @@ public class AppBarLayout_LiftOnScrollListenerImplementor
 	public AppBarLayout_LiftOnScrollListenerImplementor ()
 	{
 		super ();
-		if (getClass () == AppBarLayout_LiftOnScrollListenerImplementor.class)
+		if (getClass () == AppBarLayout_LiftOnScrollListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Google.Android.Material.AppBar.AppBarLayout+ILiftOnScrollListenerImplementor, Xamarin.Google.Android.Material", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

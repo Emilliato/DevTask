@@ -20,8 +20,9 @@ public class FragmentStrictMode_OnViolationListenerImplementor
 	public FragmentStrictMode_OnViolationListenerImplementor ()
 	{
 		super ();
-		if (getClass () == FragmentStrictMode_OnViolationListenerImplementor.class)
+		if (getClass () == FragmentStrictMode_OnViolationListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("AndroidX.Fragment.App.StrictMode.FragmentStrictMode+IOnViolationListenerImplementor, Xamarin.AndroidX.Fragment", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

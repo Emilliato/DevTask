@@ -65,27 +65,81 @@ namespace DevTask
             SetActionBar(toolbar);
             ActionBar.Title = GetString(Resource.String.app_name);
 
-            _addButton = FindViewById<FloatingActionButton>(Resource.Id.fab_add);
+            //_addButton = FindViewById<FloatingActionButton>(Resource.Id.fab_add);
 
-            _addButton.Click += (sender, e) =>
+            //_addButton.Click += (sender, e) =>
+            //{
+            //    var intent = new Intent(this, typeof(PersistanceActivity));
+            //    StartActivity(intent);
+            //};
+
+            //_data = new List<TaskViewModel>();
+
+            //_recyclerView = FindViewById<RecyclerView>(Resource.Id.rv_tasks);
+
+            //_layoutManager = new LinearLayoutManager(this);
+            //_recyclerView.SetLayoutManager(_layoutManager);
+
+            //_adapter = new DevTaskAdapter(_data);
+
+            //_adapter.DeleteItemClick += OnDeleteItemClick;
+            //_adapter.UpdateItemClick += OnUpdateItemClick;
+
+            //_recyclerView.SetAdapter(_adapter);
+
+            Spinner spinner = FindViewById<Spinner>(Resource.Id.custom_spinner);
+
+            // Create a tree data source
+            var treeData = new List<TreeNodeViewModel>
             {
-                var intent = new Intent(this, typeof(PersistanceActivity));
-                StartActivity(intent);
+                new TreeNodeViewModel
+                {
+                    Name = "Animals",
+                    Children = new List<TreeNodeViewModel>
+                    {
+                        new TreeNodeViewModel { Name = "Cat" },
+                        new TreeNodeViewModel { Name = "Dog" },
+                        new TreeNodeViewModel { Name = "Bird" }
+                    }
+                },
+                new TreeNodeViewModel
+                {
+                    Name = "Fruits",
+                    Children = new List<TreeNodeViewModel>
+                    {
+                        new TreeNodeViewModel { Name = "Apple" },
+                        new TreeNodeViewModel { Name = "Banana" },
+                        new TreeNodeViewModel { Name = "Orange" }
+                    }
+                },
+                new TreeNodeViewModel
+                {
+                    Name = "Colors",
+                    Children = new List<TreeNodeViewModel>
+                    {
+                        new TreeNodeViewModel { Name = "Red" },
+                        new TreeNodeViewModel { Name = "Green" },
+                        new TreeNodeViewModel { Name = "Blue" }
+                    }
+                }
             };
 
-            _data = new List<TaskViewModel>();
+            // Create an instance of the custom adapter and set it as the adapter for the spinner
+            TreeAdapter adapter = new TreeAdapter(this, treeData);
+            spinner.Adapter = adapter;
 
-            _recyclerView = FindViewById<RecyclerView>(Resource.Id.rv_tasks);
+            // Set the item selected listener for the spinner
+            spinner.ItemSelected += (sender, e) =>
+            {
+                // Get the selected item position
+                int position = e.Position;
 
-            _layoutManager = new LinearLayoutManager(this);
-            _recyclerView.SetLayoutManager(_layoutManager);
+                // Get the selected item value
+                var node = adapter[position];
 
-            _adapter = new DevTaskAdapter(_data);
-
-            _adapter.DeleteItemClick += OnDeleteItemClick;
-            _adapter.UpdateItemClick += OnUpdateItemClick;
-
-            _recyclerView.SetAdapter(_adapter);
+                // Do something with the selected item
+                Toast.MakeText(this, "You selected " + node.Name, ToastLength.Short).Show();
+            };
         }
 
         private void InitializeObjects()
@@ -104,17 +158,17 @@ namespace DevTask
 
         private async Task LoadData()
         {
-            if (_loadData)
-            {
-                var tasks = await _taskManager.GetTasks();
+            //if (_loadData)
+            //{
+            //    var tasks = await _taskManager.GetTasks();
 
-                RunOnUiThread(() =>
-                {
-                    _data.Clear();
-                    _data.AddRange(tasks);
-                    _adapter.NotifyDataSetChanged();
-                });
-            }
+            //    RunOnUiThread(() =>
+            //    {
+            //        _data.Clear();
+            //        _data.AddRange(tasks);
+            //        _adapter.NotifyDataSetChanged();
+            //    });
+            //}
         }
 
         private void ShowToast(string message)
